@@ -8,13 +8,22 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Titolo: {{ $project->title }}</h5>
-                            @if($project->type)
+                            {{-- @if($project->type)
                             <p>
                               <strong>
                               {{ $project->type->name }}
                               </strong>
                             </p>
+                            @endif --}}
+                            @if ($project->type)
+                                <p class="card-text"><strong>{{ $project->type->name }}</strong></p>
+                            @else
+                                <p class="card-text">Type:</p>
                             @endif
+                            @if($project->type)
+                            
+                            @endif
+
                             <p class="card-text">Slug:{{ $project->slug}}</p>
                             <p class="card-text">Descrizione: {{ $project->description}}</p>
                             <p class="card-text">Link: {{ $project->url}}</p>
