@@ -16,6 +16,16 @@
                               <label for="title" class="form-label">Title</label>
                               <input type="text" class="form-control" name="title" id="title" placeholder="Title" value="{{ old('title', $project->title) }}">
                             </div>
+
+                            <div class="mb-3">
+                              <label for="type_id" class="form-label">Types</label>
+                              <select name="type_id" class="form-control" id="type_id">
+                                <option disabled selected value>Seleziona type</option>
+                                @foreach($types as $type)
+                                  <option @selected( old('type_id',optional($project->type)->id) == $type->id ) value="{{ $type->id }}">{{ $type->name }}</option>
+                                @endforeach
+                              </select>
+                            </div>
                     
                             <div class="mb-3">
                                 <label for="slug" class="form-label">Slug</label>
