@@ -33,7 +33,7 @@
                             </div>
                       
                             <div class="d-flex gap-2">
-                                <a href="{{ route('admin.projects.show', $project)}}">
+                                <a href="{{ route('admin.projects.index', $project)}}">
                                     <button type="button" class="btn btn-secondary">Close</button>
                                 </a>
                               <input type="submit" class="btn btn-primary" value="Edit">
