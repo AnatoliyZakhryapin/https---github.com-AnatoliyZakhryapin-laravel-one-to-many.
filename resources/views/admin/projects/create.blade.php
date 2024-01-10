@@ -18,7 +18,7 @@
                   <div class="mb-3">
                     <label for="type_id" class="form-label">Types</label>
                     <select name="type_id" class="form-control" id="type_id">
-                      <option>Seleziona type</option>
+                      <option disabled selected value>Seleziona type</option>
                       @foreach($types as $type)
                         <option @selected( old('type_id') == $type->id ) value="{{ $type->id }}">{{ $type->name }}</option>
                       @endforeach
