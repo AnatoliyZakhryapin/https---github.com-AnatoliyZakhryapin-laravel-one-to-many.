@@ -16,7 +16,7 @@
                             </p>
                             @endif --}}
                             @if ($project->type)
-                                <p class="card-text"><strong>{{ $project->type->name }}</strong></p>
+                                <p class="card-text">Type: <strong>{{ $project->type->name }}</strong></p>
                             @else
                                 <p class="card-text">Type:</p>
                             @endif
