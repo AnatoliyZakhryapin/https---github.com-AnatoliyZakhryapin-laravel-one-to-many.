@@ -8,8 +8,14 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Titolo: {{ $project->title }}</h5>
+                            @if($project->type)
+                            <p>
+                              <strong>
+                              {{ $project->type->name }}
+                              </strong>
+                            </p>
+                            @endif
                             <p class="card-text">Slug:{{ $project->slug}}</p>
-                            <p class="card-text">Categoria:</p>
                             <p class="card-text">Descrizione: {{ $project->description}}</p>
                             <p class="card-text">Link: {{ $project->url}}</p>
                             <p class="card-text">Creato: {{ $project->created_at->format('d/m/Y')}}</p>
