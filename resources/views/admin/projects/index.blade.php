@@ -14,7 +14,7 @@
                     <th scope="col">ID</th>
                     <th scope="col">Title</th>
                     <th scope="col">Slug</th>
-                    <th scope="col">Category</th>
+                    <th scope="col">Type</th>
                     <th scope="col">Description</th>
                     <th scope="col">URL</th>
                     <th scope="col">Created</th>
@@ -34,8 +34,8 @@
                         </td>
                         <td> {{ $project->slug}}</td>
                         <td>
-                            {{ isset($project->category) ? $project->category->name : '-'}}
-                            {{-- {{ optional($project->category)->name  }} --}}
+                            {{ isset($project->type) ? $project->type->name : '-'}}
+                            {{-- {{ optional($project->type)->name  }} --}}
                         </td>
                         <td> {{ $project->description}}</td>
                         <td> {{ $project->url}}</td>
