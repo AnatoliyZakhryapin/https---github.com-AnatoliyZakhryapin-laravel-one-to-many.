@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Project;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
+use App\Models\Type;
 use Illuminate\Support\Str;
 
 class ProjectController extends Controller
@@ -24,7 +25,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-       return view('admin.projects.create');
+        $types = Type::orderBy('name', 'ASC')->get();
+       return view('admin.projects.create', compact('types'));
     }
 
     /**
