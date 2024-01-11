@@ -10,6 +10,20 @@
         <div class="container">
             <table class="table table-striped table-hover">
                 <thead>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <form action="{{ route('admin.projects.index') }}" method="GET">
+                                <input placeholder="filtra per titolo" class="form-control" type="text" name="title" value="{{ request()->get('title') }}">
+                            </form>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
                   <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Title</th>
